@@ -49,25 +49,19 @@
 	<!-- 로그인 양식 -->
 	<div class="container">
 		<div class="col-lg-4">
-			<div class="jumbotron" style="padding-top:20px;">
+			<div class="jumbotron" style="padding-top:20px;"><!-- jumbotron은 특정정보를 잘 보이기 위한 박스 -->
 				<form action="loginAction.jsp" method="post">
-					<h3 style="text-align:center;">로그인 화면</h3>
-					<div class=form-group">
+					<h3 style="text-align:center;">로그인 </h3>
+					<div class="form-group">
 						<input type="text" class="form-control" placeholder="아이디" name="userID" maxlength="20">
 					</div>
-					<div class=form-group">
+					<div class="form-group">
 						<input type="password" class="form-control" placeholder="패스워드" name="userPassword" maxlength="20">
 					</div>
 					<input type="submit" class="btn btn-primary form-control" value="로그인">
 				</form>
-			</div>
-		</div>
-	</div>
-	
-	JSP: <%= JspFactory.getDefaultFactory().getEngineInfo().getSpecificationVersion() %>
-	
-	Servlet: <%=application.getMajorVersion()%>.<%= application.getMinorVersion() %>
-
-
+			</div><!-- jumbotron -->
+		</div><!-- //col-lg-4 -->
+	</div><!-- // container -->
 </body>
 </html>
