@@ -7,8 +7,12 @@
 <title>JSP 게시판 웹 사이트</title>
 </head>
 <body>
-	<script>
-		location.href="main.jsp";
-	</script>
+<%
+	session.invalidate();	// 세션 초기화
+%>
+<script>
+	alert("로그아웃 되었습니다");
+	location.href="main.jsp";
+</script>
 </body>
 </html>

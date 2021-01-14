@@ -38,26 +38,42 @@
 						접속하기<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
-						<li class="active"><a href="login.jsp">로그인</a></li>
-						<li><a href="join.jsp">회원가입</a></li>
+						<li><a href="login.jsp">로그인</a></li>
+						<li class="active"><a href="join.jsp">회원가입</a></li> <!-- active로 회원가입부분을 활성화 함 -->
 					</ul>
 				</li>
 			</ul>
 		</div>
 	</nav><!-- //nav -->
-	<!-- 로그인 양식 -->
+	<!-- 회원가입 양식 -->
 	<div class="container">
 		<div class="col-lg-4">
 			<div class="jumbotron" style="padding-top:20px;"><!-- jumbotron은 특정정보를 잘 보이기 위한 박스 -->
-				<form action="loginAction.jsp" method="post">
-					<h3 style="text-align:center;">로그인 </h3>
+				<form action="joinAction.jsp" method="post">
+					<h3 style="text-align:center;">회원가입 </h3>
 					<div class="form-group">
 						<input type="text" class="form-control" placeholder="아이디" name="userID" maxlength="20">
 					</div>
 					<div class="form-group">
 						<input type="password" class="form-control" placeholder="패스워드" name="userPassword" maxlength="20">
 					</div>
-					<input type="submit" class="btn btn-primary form-control" value="로그인">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="이름" name="userName" maxlength="20">
+					</div>
+					<div class="form-group" style="text-align: center;">
+						<div class="btn-group" data-toggle="buttons">
+							<label class="btn btn-primary"><!-- active가 들어가면 선택되어 활성화됨 -->
+								<input type="radio" name="userGender" autocomplete="off" value="남자" >남자	<!-- autocomplete는 자동완성 off하면 자동완성하지 않음 -->
+							</label>
+							<label class="btn btn-primary">
+								<input type="radio" name="userGender" autocomplete="off" value="여자" >여자
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<input type="email" class="form-control" placeholder="이메일" name="userEmail" maxlength="20">
+					</div>
+					<input type="submit" class="btn btn-primary form-control" value="회원가입">
 				</form>
 			</div><!-- jumbotron -->
 		</div><!-- //col-lg-4 -->
